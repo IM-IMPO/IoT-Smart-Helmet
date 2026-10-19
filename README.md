@@ -71,23 +71,54 @@ A manual SOS button is also provided to allow the rider to initiate an emergency
 
 The ESP32 receives sensor measurements and button inputs, processes the programmed detection rules, controls the local warning indicators, and communicates with the GPS and GSM modules.
 
-## Hardware Components
+## Hardware Components and Estimated Prices
 
-| Component | Purpose |
-|---|---|
-| ESP32 Dev Board | Main controller and processing unit |
-| MPU6050 | Measures acceleration and angular velocity |
-| NEO-6M GPS | Provides geographical coordinates |
-| SIM800L GSM | Sends SMS alerts over a compatible cellular network |
-| SOS push button | Manually initiates an emergency countdown |
-| Cancel push button | Cancels a pending alert |
-| Buzzer | Produces an audible warning |
-| LED | Provides a visual warning |
-| LED resistor | Limits current through the LED |
-| Battery | Supplies portable power |
-| Charger and protection circuit | Supports appropriate battery charging and protection |
-| Voltage regulator or suitable power supply | Provides the required supply voltage and current |
-| Jumper wires and prototype board | Connect the electronic components |
+The following bill of materials lists the main components needed to assemble a physical prototype. Prices are estimates in Philippine pesos (PHP) and may vary by seller, shipping fee, module version, and availability.
+
+| Component | Quantity | Estimated Unit Price | Estimated Subtotal |
+|---|---:|---:|---:|
+| ESP32 development board | 1 | ₱295 | ₱295 |
+| MPU6050 accelerometer and gyroscope module | 1 | ₱122 | ₱122 |
+| NEO-6M GPS module with antenna | 1 | ₱270 | ₱270 |
+| SIM800L GSM module with antenna | 1 | ₱300 | ₱300 |
+| Push buttons for SOS and cancel | 2 | ₱10 | ₱20 |
+| Active buzzer | 1 | ₱36 | ₱36 |
+| LED | 1 | ₱5 | ₱5 |
+| Resistors for LED and signal protection as required | 1 set | ₱10 | ₱10 |
+| TP4056 lithium battery charging module with protection | 1 | ₱30 | ₱30 |
+| Rechargeable 18650 lithium-ion battery | 1 | ₱180 | ₱180 |
+| 18650 battery holder and connector | 1 | ₱35 | ₱35 |
+| Suitable regulated power supply for SIM800L | 1 | ₱80 | ₱80 |
+| Electrolytic capacitor for GSM power stabilization | 1 | ₱15 | ₱15 |
+| Breadboard or prototype board | 1 | ₱80 | ₱80 |
+| Jumper wires | 1 set | ₱48 | ₱48 |
+| Perfboard for permanent assembly (optional during initial testing) | 1 | ₱40 | ₱40 |
+| Compatible SIM card and initial load | 1 | ₱50 | ₱50 |
+| **Estimated total without a new helmet** | | | **₱1,616** |
+| Optional certified motorcycle helmet | 1 | ₱500 | ₱500 |
+| **Estimated total including optional helmet** | | | **₱2,116** |
+
+**Budget notes:**
+
+- These are planning estimates, not guaranteed live prices or a verified shopping cart. Check current listings before purchasing.
+- The helmet allowance is a budget placeholder, not a verified price for a certified helmet. If you already own a suitable helmet, exclude this cost.
+- The SIM800L price assumes a basic module. Verify whether the listing includes an antenna and other required accessories.
+- The power-supply estimate assumes a suitable regulator or supply capable of handling the SIM800L's current bursts. A low-cost module may not meet that requirement; choose based on the actual module specifications.
+- The battery, charger, regulator, and holder must be compatible with one another. A TP4056 charger is not, by itself, a complete power supply for every component.
+- The estimate excludes shipping, tools, solder, enclosure materials, mounting hardware, and replacement parts.
+- If you already have a USB cable, breadboard, jumper wires, or other components, your actual cost may be lower.
+- The ESP32, MPU6050, GPS, and GSM modules are the principal electronic components. Buttons, LEDs, wires, and resistors are low-cost supporting components.
+
+### Price References
+
+Examples of Philippine component listings consulted for the budget include:
+
+- ESP32 development board: [Shopee Philippines](https://shopee.ph/ESP32-DevKitC-core-board-ESP32-development-board-ESP32-WROOM-32D-ESP32-WROOM-32U-for-Arduino-i.1137847711.24830442722)
+- MPU6050 sensor: [FU LABS](https://fulabs.ph/products/iic-i2c-gy-521-mpu-6050-mpu6050-3-axis-analog-gyroscope-sensors-3-axis-accelerometer-module-for-with-pins-3-5v-dc)
+- TP4056 charging module: [Shopee Philippines](https://shopee.ph/search?keyword=tp4056)
+- Other parts should be priced using current listings from reputable electronics suppliers.
+
+The table is a preliminary bill of materials, not a guarantee that every component is currently available at the stated price.
 
 ## Pin Connections
 
@@ -215,15 +246,19 @@ Test the buttons, GPS reception, and GSM functionality individually before attem
 ## Screenshots
 
 ### Wokwi Circuit Diagram
+
 ![Wokwi Smart Helmet Circuit](screenshots/wokwi-circuit.png)
 
 ### Wokwi Simulation
+
 ![Smart Helmet Simulation](screenshots/wokwi-simulation.png)
 
 ### Arduino IDE Setup
+
 ![Arduino IDE Setup](screenshots/arduino-ide-board.png)
 
 ### Serial Monitor Test Results
+
 ![Serial Monitor Results](screenshots/serial-monitor.png)
 
 > **Note:** These image paths are placeholders until you add the corresponding screenshots. GitHub will display the images once the files exist at those paths. Only document results that you have actually observed.
