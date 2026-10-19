@@ -1,0 +1,39 @@
+# Arduino build files
+build/
+out/
+*.o
+*.a
+*.elf
+*.hex
+*.bin
+*.map
+
+# Compiled firmware
+*.uf2
+
+# VS Code settings
+.vscode/
+!.vscode/extensions.json
+
+# Operating system files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary and backup files
+*.tmp
+*.bak
+*.swp
+*~
+
+# Logs
+*.log
+
+# Local secrets and private configuration
+.env
+.env.*
+!.env.example
+
+# Local backups
+*.backup
+*.old
