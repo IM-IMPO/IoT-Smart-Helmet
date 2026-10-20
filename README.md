@@ -255,7 +255,7 @@ Test the buttons, GPS reception, and GSM functionality individually before attem
 
 ### Arduino IDE Setup
 
-![Arduino IDE Setup](screenshots/arduino-ide-board.png)
+![Arduino IDE Setup](screenshots/arduino-ide-board-new.png)
 
 ### Serial Monitor Test Results
 
